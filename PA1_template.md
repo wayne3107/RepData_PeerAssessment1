@@ -82,6 +82,13 @@ sum(is.na(data$steps))
 
 I use the mean for that 5-minute interval to fill in the missing values.
 
+First, I calculate the number of days where all steps are missing value, assign it to variable *times*.
+
+Second, I replicate the number of average steps each interval for *times* times, assign it to *imputation*.
+
+Last, I use *impute* funciont in *Hmisc* package to fill in the missing value with *imputation*, and assign it to variable *steps*.
+
+
 
 ```r
 library(Hmisc)
